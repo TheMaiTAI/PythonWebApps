@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\02\\ProfileApp",
+    "\\02\\ProfileApp\\config",
+    "\\02\\ProfileApp\\templates",
+    "\\03",
+    "\\03\\Superhero",
+    "\\03\\SuperheroNew",
+    "\\03\\SuperheroNew\\config",
+    "\\03\\SuperheroNew\\hero",
+    "\\03\\SuperheroNew\\hero\\templates"
+  ],
+  "SelectedNode": "\\03\\SuperheroNew\\hero\\views.py",
+  "PreviewInSolutionExplorer": false
+}

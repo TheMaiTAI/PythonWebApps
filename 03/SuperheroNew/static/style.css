@@ -1,0 +1,145 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: floralwhite;
+    border: 2px dashed floralwhite;
+    width: auto;
+    height: auto;
+    font-size: large;
+    border-radius: 15px;
+}
+
+h1 {
+
+    text-align: center;
+
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+}
+
+.shield {
+    background-color: #1D2E07;
+    color: #E3E3E3;
+    border-color: #E3E3E3;
+}
+
+.ghost {
+
+    background-color: black;
+    color: lawngreen;
+    border-color: lawngreen;
+
+}
+
+.thief {
+
+    background-color: black;
+    color: red;
+    border-color: red;
+
+}
+
+.image {
+
+    float: right;
+    clear: right;
+    padding-right: 40px;
+
+}
+
+.info {
+
+    float: left;
+    clear: left;
+    padding-left: 40px;
+
+}
+
+.shield::after {
+
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+.ghost::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.thief::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.shield .btn {
+    background-color: #2C420F;
+    border: 5px solid #2C420F;
+    border-radius: 8px;
+    color: #E3E3E3;
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    clear: both;
+}
+
+    .shield .btn:hover {
+        background-color: #607F36;
+        border: 5px solid #506E28;
+        text-decoration: none;
+    }
+
+.ghost .btn {
+    background-color: lawngreen;
+    border: 5px solid lawngreen;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    clear: both;
+}
+
+.ghost .btn:hover {
+    background-color: green;
+    border: 5px solid darkgreen;
+    text-decoration: none;
+    color: limegreen;
+}
+
+.thief .btn {
+    background-color: red;
+    border: 5px solid darkred;
+    border-radius: 8px;
+    color: black;
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    clear: both;
+}
+
+.thief .btn:hover {
+    background-color: darkred;
+    border: 5px solid red;
+    text-decoration: none;
+    color: whitesmoke;
+}
