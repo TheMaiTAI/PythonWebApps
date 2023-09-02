@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 class HeroListView(TemplateView):
-    template_name = 'heroes.html'
+    template_name = 'index.html'
     
 class HeroFirstDetailView(TemplateView):  
         
