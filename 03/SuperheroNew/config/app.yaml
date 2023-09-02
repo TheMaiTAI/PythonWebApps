@@ -5,7 +5,7 @@ envs:
 - key: DISABLE_COLLECTSTATIC
   scope: RUN_AND_BUILD_TIME
   value: "1"
-name: BACS350-Project3
+name: heroprofiles
 region: nyc
 services:
 - environment_slug: python
@@ -16,7 +16,7 @@ services:
   http_port: 8080
   instance_count: 1
   instance_size_slug: basic-xxs
-  name: BACS350-Project3
+  name: heroprofiles
   routes:
   - path: /
   run_command: |
@@ -29,7 +29,7 @@ static_sites:
     branch: main
     deploy_on_push: true
     repo: TheMaiTAI/PythonWebApps
-  name: BACS350-Project3-static
+  name: heroprofiles-static
   routes:
   - path: /static
   source_dir: 03/SuperheroNew/static
