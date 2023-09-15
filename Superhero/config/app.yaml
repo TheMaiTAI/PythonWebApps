@@ -5,32 +5,31 @@ envs:
 - key: DISABLE_COLLECTSTATIC
   scope: RUN_AND_BUILD_TIME
   value: "1"
-name: webapps-demo
+name: heroprofiles
 region: nyc
 services:
 - environment_slug: python
   github:
     branch: main
     deploy_on_push: true
-    repo: Mark-Seaman/PythonWebApps
+    repo: TheMaiTAI/PythonWebApps
   http_port: 8080
   instance_count: 1
   instance_size_slug: basic-xxs
-  name: webapps-demo-app
+  name: heroprofiles
   routes:
   - path: /
   run_command: |
     python manage.py migrate --no-input
-    python manage.py loaddata hero.json
     gunicorn --worker-tmp-dir /dev/shm config.wsgi
-  source_dir: Superhero
+  source_dir: 03/SuperheroNew
 static_sites:
 - environment_slug: html
   github:
     branch: main
     deploy_on_push: true
-    repo: Mark-Seaman/PythonWebApps
-  name: webapps-demo-static
+    repo: TheMaiTAI/PythonWebApps
+  name: heroprofiles-static
   routes:
   - path: /static
-  source_dir: Superhero/static
+  source_dir: 03/SuperheroNew/static
