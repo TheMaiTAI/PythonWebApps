@@ -1,0 +1,50 @@
+alerts:
+- disabled: true
+  rule: DEPLOYMENT_FAILED
+- disabled: true
+  rule: DOMAIN_FAILED
+envs:
+- key: DISABLE_COLLECTSTATIC
+  scope: RUN_AND_BUILD_TIME
+  value: "1"
+- key: DEBUG
+  scope: RUN_AND_BUILD_TIME
+  value: "TRUE"
+features:
+- buildpack-stack=ubuntu-22
+ingress:
+  rules:
+  - component:
+      name: superhero
+    match:
+      path:
+        prefix: /
+  - component:
+      name: superhero-static
+    match:
+      path:
+        prefix: /static
+name: project-04-superhero
+region: nyc
+services:
+- environment_slug: python
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: TheMaiTAI/PythonWebApps
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: superhero
+  run_command: |-
+    python manage.py migrate --no-input
+    gunicorn --worker-tmp-dir /dev/shm Superhero.wsgi
+  source_dir: Student/04/Superhero
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: TheMaiTAI/PythonWebApps
+  name: superhero-static
+  source_dir: Student/04/Superhero/static

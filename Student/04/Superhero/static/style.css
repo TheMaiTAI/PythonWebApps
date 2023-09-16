@@ -1,0 +1,167 @@
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	background-color: black;
+	color: floralwhite;
+	border: 2px dashed floralwhite;
+	width: auto;
+	height: auto;
+	font-size: large;
+	border-radius: 15px;
+}
+
+.corrin {
+	background-color: midnightblue;
+	color: antiquewhite;
+	border-color: antiquewhite;
+}
+
+.shieldhero {
+	background-color: #1D2E07;
+	color: #E3E3E3;
+	border-color: #E3E3E3;
+}
+
+.deku {
+	background-color: #176768;
+	color: #f7efe2;
+	border-color: #d23838;
+}
+
+.joker {
+	background-color: black;
+	color: red;
+	border-color: red;
+}
+
+.phantom {
+	background-color: black;
+	color: lawngreen;
+	border-color: lawngreen;
+}
+
+h1 {
+	text-align: center;
+}
+
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: bold;
+	color: green;
+	text-decoration: underline;
+}
+
+.image {
+	float: right;
+	clear: right;
+	padding-right: 40px;
+	height: 350px;
+}
+
+.shieldhero .btn {
+	background-color: #2C420F;
+	border: 5px solid #2C420F;
+	border-radius: 8px;
+	color: #E3E3E3;
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	clear: both;
+}
+
+	.shieldhero .btn:hover {
+		background-color: #607F36;
+		border: 5px solid #506E28;
+		text-decoration: none;
+	}
+
+.phantom .btn {
+	background-color: lawngreen;
+	border: 5px solid lawngreen;
+	border-radius: 8px;
+	color: black;
+	font-weight: bold;
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	clear: both;
+}
+
+	.phantom .btn:hover {
+		background-color: green;
+		border: 5px solid darkgreen;
+		text-decoration: none;
+		color: limegreen;
+	}
+
+.joker .btn {
+	background-color: red;
+	border: 5px solid darkred;
+	border-radius: 8px;
+	color: black;
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	clear: both;
+}
+
+	.joker .btn:hover {
+		background-color: darkred;
+		border: 5px solid red;
+		text-decoration: none;
+		color: whitesmoke;
+	}
+
+.deku .btn {
+	background-color: lawngreen;
+	border: 5px solid lawngreen;
+	border-radius: 8px;
+	color: black;
+	font-weight: bold;
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	clear: both;
+}
+
+	.deku .btn:hover {
+		background-color: green;
+		border: 5px solid darkgreen;
+		text-decoration: none;
+		color: limegreen;
+	}
+
+.corrin .btn {
+	background-color: lawngreen;
+	border: 5px solid lawngreen;
+	border-radius: 8px;
+	color: black;
+	font-weight: bold;
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	clear: both;
+}
+
+	.corrin .btn:hover {
+		background-color: green;
+		border: 5px solid darkgreen;
+		text-decoration: none;
+		color: limegreen;
+	}
+
+body::after {
+	content: "";
+	clear: both;
+	display: table;
+}

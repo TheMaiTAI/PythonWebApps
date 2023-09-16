@@ -1,3 +1,12 @@
-<h1>{{hero}}</h1>
+{% extends 'superhero_theme.html' %}
 
-<img src="/static/images/{{image}}.jpg" alt="{{image}}.jpg" />
+    {%block title%}
+<h1>{{heroName}}</h1>
+    {%endblock title%}
+
+    {% block content %}
+<p><a href="/" class="btn">Home</a></p>
+
+<img src="{{image}}.jpg" alt="{{image}}.jpg" class="image"/>
+
+    {% endblock content %}

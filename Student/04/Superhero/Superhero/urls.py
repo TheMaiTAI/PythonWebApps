@@ -22,9 +22,5 @@ from hero.views import HeroDetailView
 
 urlpatterns = [
     path('', HeroListView.as_view()),
-    path('hero/phantom', HeroDetailView.as_view(name="Phantom")),
-    path('hero/shield', HeroDetailView.as_view(name="Shield Hero")),
-    path('hero/joker', HeroDetailView.as_view(name="Joker")),
-    path('hero/deku', HeroDetailView.as_view(name="Deku")),
-    path('hero/corrin', HeroDetailView.as_view(name="Corrin Oskas")),
+    path('<str:name>', HeroDetailView.as_view()),
 ]
