@@ -11,5 +11,10 @@ class HeroDetailView(TemplateView):
     
     def get_context_data(self, **kwargs):
         name = self.name
+        image = name.lower()
+
         
-        return {'hero' : name}
+        return {
+            'hero' : name,
+            'image': image
+            }
