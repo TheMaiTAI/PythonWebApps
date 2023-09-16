@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\02",
-    "\\02\\ProfileApp",
-    "\\02\\ProfileApp\\static",
-    "\\02\\ProfileApp\\templates",
-    "\\03",
-    "\\03\\SuperheroNew",
-    "\\03\\SuperheroNew\\hero",
-    "\\03\\SuperheroNew\\hero\\templates",
-    "\\03\\SuperheroNew\\static"
+    "\\ClassroomDemos",
+    "\\ClassroomDemos\\03\\Superhero",
+    "\\Student",
+    "\\Student\\01\\ProfileApp",
+    "\\Student\\04"
   ],
-  "SelectedNode": "\\03\\SuperheroNew\\hero\\views.py",
+  "SelectedNode": "\\Student\\04\\Gallery",
   "PreviewInSolutionExplorer": false
 }
