@@ -11,10 +11,6 @@ from django.views.generic import TemplateView
 class HeroListView(TemplateView):
     template_name = "index.html"
     
-    def get_context_data(self, **kwargs):
-        
-        return dict(heroes=hero_list())
-    
 
 
 class HeroDetailView(TemplateView):
@@ -34,13 +30,4 @@ class HeroDetailView(TemplateView):
             'image': image,
             'heroClass': className
             }
-
-def hero_list():
-    
-    fileName = ""
-    heroes = Path('static/images').iterdir()
-    heroes = [f for i, f in enumerate(heroes)]
-    
-
-    return heroes
     
