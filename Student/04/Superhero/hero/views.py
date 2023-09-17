@@ -1,5 +1,6 @@
 import os
 from typing import Any, Dict
+from Student.04.Superhero.Superhero.settings import BASE_DIR
 from django.shortcuts import render
 from pathlib import Path
 from django.views.generic import TemplateView
@@ -34,7 +35,7 @@ class HeroDetailView(TemplateView):
 
 def hero_list():
     fileName = ""
-    path = '/static/images'
+    path = BASE_DIR / '/static/images'
     images = os.listdir(path)
     heroes = []
     for i in images:
