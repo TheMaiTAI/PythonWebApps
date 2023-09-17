@@ -34,7 +34,7 @@ class HeroDetailView(TemplateView):
 
 def hero_list():
     fileName = ""
-    path = 'C:/Users/Tom/source/repos/PythonWebApps/Student/04/Superhero/static/images'
+    path = '/static/images'
     images = os.listdir(path)
     heroes = []
     for i in images:
