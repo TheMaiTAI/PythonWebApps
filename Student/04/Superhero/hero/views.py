@@ -1,6 +1,6 @@
 import os
 from typing import Any, Dict
-from Student.04.Superhero.Superhero.settings import BASE_DIR
+from Superhero.settings import BASE_DIR
 from django.shortcuts import render
 from pathlib import Path
 from django.views.generic import TemplateView
