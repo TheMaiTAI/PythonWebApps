@@ -36,15 +36,11 @@ class HeroDetailView(TemplateView):
             }
 
 def hero_list():
+    
     fileName = ""
-    path = STATICFILES_DIRS / '/images'
-    images = os.listdir(path)
-    heroes = []
-    for i in images:
-        fileName = i
-        fileName = i[0:-4]
-        fileName = fileName.title()
-        heroes.append(fileName)
+    heroes = Path('static/images').iterdir()
+    heroes = [f for i, f in enumerate(heroes)]
+    
 
     return heroes
     
