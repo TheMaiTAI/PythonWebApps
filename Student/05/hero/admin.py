@@ -2,4 +2,8 @@ from django.contrib import admin
 
 from .models import Superhero
 
-admin.site.register(Superhero)
+class SuperheroAdmin(admin.ModelAdmin):
+    list_display = ("name", "description")
+    prepopulated_fields = {"slug": ("name",)}
+
+admin.site.register(Superhero, SuperheroAdmin)
