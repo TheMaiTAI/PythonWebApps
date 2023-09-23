@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassroomDemos",
-    "\\ClassroomDemos\\03\\Superhero",
     "\\Student",
-    "\\Student\\01\\ProfileApp",
-    "\\Student\\04"
+    "\\Student\\03\\Superhero\\config",
+    "\\Student\\04",
+    "\\Student\\04\\Superhero",
+    "\\Student\\04\\Superhero\\hero",
+    "\\Student\\04\\Superhero\\hero\\templates",
+    "\\Student\\04\\Superhero\\static",
+    "\\Student\\04\\Superhero\\static\\images",
+    "\\Student\\04\\Superhero\\Superhero"
   ],
-  "SelectedNode": "\\Student\\04\\Gallery",
+  "SelectedNode": "\\Student\\04\\Superhero\\hero\\templates\\index.html",
   "PreviewInSolutionExplorer": false
 }
