@@ -1,5 +1,18 @@
+{% extends 'superhero_theme.html' %}
+
+{% block title %}
 {% for h in hero %}
-<p>{{h.name}}</p>
+<h1>{{h.name}}</h1>
+{% endfor %}
+{% endblock title %}
+
+{% block content %}
+
+<p><a href="/" class="btn">Home</a></p>
+
+{% for h in hero %}
 <p>{{h.description}}</p>
 <img src="{{h.image}}" alt="{{h.description}}.jpg" class="image" />
 {% endfor %}
+
+{% endblock content %}

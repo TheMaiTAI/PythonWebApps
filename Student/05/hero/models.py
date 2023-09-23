@@ -6,6 +6,7 @@ class Superhero(models.Model):
     description = models.TextField()
     image = models.CharField(max_length=200)
     slug = models.SlugField(null=False, unique=True)
+    heroClass = models.CharField(max_length=200, null=True)
 
     def __str__(self):
         return self.name

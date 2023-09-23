@@ -9,7 +9,7 @@ class HeroDetailView(TemplateView):
         context = super(HeroDetailView, self).get_context_data(**kwargs)
         path = self.request.path
         hero = path.replace("/hero/", "")
-        context['hero'] = Superhero.objects.filter(slug=hero)        
+        context['hero'] = Superhero.objects.filter(slug=hero)
         return context
         
     
