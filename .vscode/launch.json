@@ -65,5 +65,17 @@
         "django": true,
         "justMyCode": true
       }
-    ]
+	  {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "manage.py",
+            "cwd": "${workspaceFolder}/06",
+            "args": [
+                "runserver"
+            ],
+            "django": true,
+            "justMyCode": true
+        }
+    
 }
