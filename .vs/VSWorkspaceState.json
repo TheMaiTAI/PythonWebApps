@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Student",
-    "\\Student\\03\\Superhero\\config",
-    "\\Student\\04",
+    "\\Student\\03\\Superhero",
     "\\Student\\04\\Superhero",
     "\\Student\\04\\Superhero\\hero",
     "\\Student\\04\\Superhero\\hero\\templates",
-    "\\Student\\04\\Superhero\\static",
-    "\\Student\\04\\Superhero\\static\\images",
-    "\\Student\\04\\Superhero\\Superhero"
+    "\\Student\\05",
+    "\\Student\\05\\config",
+    "\\Student\\05\\static",
+    "\\Student\\05\\static\\images"
   ],
-  "SelectedNode": "\\Student\\04\\Superhero\\hero\\templates\\index.html",
+  "SelectedNode": "\\Student\\05\\static\\images\\shield hero.jpg",
   "PreviewInSolutionExplorer": false
 }
