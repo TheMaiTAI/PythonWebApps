@@ -7,3 +7,5 @@ class Superhero(models.Model):
     strength = models.CharField(max_length=100, default="Strength")
     weakness = models.CharField(max_length=100, default="Weakness")
     image = models.CharField(max_length=100, default="Image")
+    slug = models.SlugField(null=False, unique=True, default="hero-name")
+    heroClass = models.CharField(max_length=200, null=True)
