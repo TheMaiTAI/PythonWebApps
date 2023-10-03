@@ -20,11 +20,12 @@ class HeroListView(ListView):
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Superhero
-    context_object_name = 'hero_details'    
+    context_object_name = 'hero_details'
         
     def get_context_data(self, name=context_object_name, **kwargs):                        
         context = super(HeroDetailView, self).get_context_data(**kwargs)
-        key = context[name].id
+        path = Superhero.get_absolute_url()
+        key = path["key"]
         context[name] = Superhero.objects.filter(pk=key)
         return context;
 
