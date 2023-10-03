@@ -59,9 +59,10 @@ a:hover {
 .image {
 	float: right;
 	clear: right;
-	padding-right: 40px;
+	padding-right: 20px;
 	width: 60%;
-	height: 50%;
+	height: 60%;
+	object-fit: scale-down;
 }
 
 body::after {
@@ -71,14 +72,18 @@ body::after {
 }
 
 .btn {
-	width: 75px;
+	width: 100px;
 	text-align: center;
 	padding: 5px;
 	font-weight: bold;
+	border: 5px solid floralwhite;
+	border-radius: 8px;
 }
 
 	.btn:hover {
 		text-decoration: none;
+		color: black;
+		background-color: lightslategrey;
 	}
 
 .shieldhero .btn {
@@ -86,6 +91,7 @@ body::after {
 	border: 5px solid #2C420F;
 	border-radius: 8px;
 	color: #E3E3E3;
+	clear: both;
 }
 
 .shieldhero .btn:hover {
@@ -98,6 +104,7 @@ body::after {
 	border: 5px solid lawngreen;
 	border-radius: 8px;
 	color: black;
+	clear: both;
 }
 
 	.phantom .btn:hover {
@@ -111,6 +118,7 @@ body::after {
 	border: 5px solid darkred;
 	border-radius: 8px;
 	color: black;
+	clear: both;
 }
 
 	.joker .btn:hover {
@@ -124,6 +132,7 @@ body::after {
 	border: 5px solid crimson;
 	border-radius: 8px;
 	color: black;
+	clear: both;
 }
 
 	.deku .btn:hover {
@@ -137,6 +146,7 @@ body::after {
 	border: 5px solid #531a34;
 	border-radius: 8px;
 	color: antiquewhite;
+	clear: both;
 }
 
 	.witch .btn:hover {
@@ -144,3 +154,12 @@ body::after {
 		border: 5px solid #7c204d;
 		color: antiquewhite;
 	}
+
+.container {
+
+	float: left;
+	clear: left;
+	margin: auto;
+	width: 100%;
+
+}

@@ -1,6 +1,6 @@
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from typing import Any, Dict
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
 from .models import Superhero
 import os
@@ -12,23 +12,11 @@ class HeroListView(ListView):
     template_name = "hero/list.html"
     model = Superhero
     context_object_name = 'heroes'
-    
-    def get_context_data(self, name=context_object_name, **kwargs):
-        context = super(HeroListView, self).get_context_data(**kwargs)
-        context[name] = Superhero.objects.all();
-        return context
 
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Superhero
-    context_object_name = 'hero_details'
-        
-    def get_context_data(self, name=context_object_name, **kwargs):                        
-        context = super(HeroDetailView, self).get_context_data(**kwargs)            
-        key = self.kwargs['pk']
-        context[name] = Superhero.objects.filter(pk=key)
-        return context
-            
+    context_object_name = 'hero'            
 
 class HeroCreateView(CreateView):
     template_name = "hero/add.html"
@@ -43,4 +31,7 @@ class HeroUpdateView(UpdateView):
 class HeroDeleteView(DeleteView):
     model = Superhero
     template_name = 'hero/delete.html'
+    
+    def get_success_url(self):
+        return reverse_lazy("hero_list")
     

@@ -11,10 +11,10 @@ class Superhero(models.Model):
     weakness = models.CharField(max_length=100, default="Weakness")
     image = models.CharField(max_length=100, default="Image")
     slug = models.SlugField(null=False, unique=True, default="hero-name")
-    heroClass = models.CharField(max_length=200, null=True)
+    heroClass = models.CharField(max_length=200, null=True, default="heroClass")
 
     def __str__(self):
         return self.name
     
     def get_absolute_url(self):
-        return reverse("hero_detail", kwargs={"slug": self.slug})
+        return reverse("hero_detail", kwargs={"pk": self.pk})
