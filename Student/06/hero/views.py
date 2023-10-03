@@ -24,7 +24,7 @@ class HeroDetailView(DetailView):
         
     def get_context_data(self, name=context_object_name, **kwargs):                        
         context = super(HeroDetailView, self).get_context_data(**kwargs)
-        path = Superhero.get_absolute_url()
+        path = Superhero.get_absolute_url(self)
         key = path["key"]
         context[name] = Superhero.objects.filter(pk=key)
         return context;
