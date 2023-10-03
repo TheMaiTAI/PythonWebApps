@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +27,9 @@ SECRET_KEY = 'django-insecure-4=1yb(v!koi__q9myxid@8d8sgou)2=)3-(#vn$to_&cp8!+z3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 
@@ -79,7 +83,13 @@ DATABASES = {
     'default': {
         'ENGINE': os.getenv('DATABASE_ENGINE'),
         'NAME': os.getenv('DATABASE_NAME'),
-    }
+    },
+    
+    'local': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+     }
+    
 }
 
 POSTGRES_DB = os.getenv("POSTGRES_DB")  # database name
@@ -107,6 +117,20 @@ if POSTGRES_READY:
             "PORT": POSTGRES_PORT,
         }
     }
+    
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / 'db.sqlite3',
+            "USER": None,
+            "PASSWORD": None,
+            "HOST": None,
+            "PORT": None,           
+
+            }
+        
+        }
 
 
 # Password validation

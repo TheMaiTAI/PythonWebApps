@@ -1,0 +1,7 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+{% for hero in heroes %}
+<a href="{{hero.pk}}"><p>{{ hero.name }}</p></a>
+{% endfor %}
+{% endblock content %}
