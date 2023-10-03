@@ -81,14 +81,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DATABASE_ENGINE'),
-        'NAME': os.getenv('DATABASE_NAME'),
-    },
-    
-    'local': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-     }
+        'ENGINE': os.getenv('DATABASE_ENGINE','django.db.backends.sqlite3'),
+        'NAME': os.getenv('DATABASE_NAME',(BASE_DIR / 'db.sqlite3')),
+    }
     
 }
 
@@ -117,20 +112,6 @@ if POSTGRES_READY:
             "PORT": POSTGRES_PORT,
         }
     }
-    
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / 'db.sqlite3',
-            "USER": None,
-            "PASSWORD": None,
-            "HOST": None,
-            "PORT": None,           
-
-            }
-        
-        }
 
 
 # Password validation
