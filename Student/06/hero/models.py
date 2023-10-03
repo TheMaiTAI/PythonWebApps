@@ -17,4 +17,4 @@ class Superhero(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse("hero_detail", kwargs={"slug": self.slug, "key": self.pk})
+        return reverse("hero_detail", kwargs={"slug": self.slug})

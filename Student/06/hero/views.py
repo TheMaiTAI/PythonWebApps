@@ -1,3 +1,4 @@
+from django.urls import reverse
 from typing import Any, Dict
 from django.shortcuts import render
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
@@ -15,7 +16,7 @@ class HeroListView(ListView):
     def get_context_data(self, name=context_object_name, **kwargs):
         context = super(HeroListView, self).get_context_data(**kwargs)
         context[name] = Superhero.objects.all();
-        return context;
+        return context
 
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
@@ -23,11 +24,11 @@ class HeroDetailView(DetailView):
     context_object_name = 'hero_details'
         
     def get_context_data(self, name=context_object_name, **kwargs):                        
-        context = super(HeroDetailView, self).get_context_data(**kwargs)
-        path = Superhero.get_absolute_url(self)
-        key = path["key"]
+        context = super(HeroDetailView, self).get_context_data(**kwargs)            
+        key = self.kwargs['pk']
         context[name] = Superhero.objects.filter(pk=key)
-        return context;
+        return context
+            
 
 class HeroCreateView(CreateView):
     template_name = "hero/add.html"

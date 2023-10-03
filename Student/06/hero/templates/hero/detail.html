@@ -1,14 +1,15 @@
 {% extends 'superhero_theme.html' %}
 
-{% for h in hero_details %}
 {% block title %}
+{% for h in hero_details %}
 <h1>{{h.name}}</h1>
+{% endfor %}
 {% endblock title %}
 
 {% block content %}
 <p><a href="/hero" class="btn">Home</a></p>
 
-
+{% for h in hero_details %}
 <p>Real Name: {{h.identity}}</p>
 <p>Description: {{h.description}}</p>
 <p>Strength: {{h.strength}}</p>
@@ -17,7 +18,6 @@
 
 <p class="btn"><a href="{{h.pk}}/edit">Modify Hero</a></p>
 <p class="btn"><a href="{{h.pk}}/delete">Delete Hero</a></p>
-
+{% endfor %}
 
 {% endblock content %}
-{% endfor %}
