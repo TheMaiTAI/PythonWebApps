@@ -1,0 +1,146 @@
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: 'Courier New', Courier, monospace;
+	background-color: black;
+	color: floralwhite;
+	border: 2px dashed floralwhite;
+	width: auto;
+	height: auto;
+	font-size: large;
+	border-radius: 15px;
+}
+
+.witch {
+	color: #4d2c47;
+	border-color: #4d2c47;
+	background-color: #a77fa1;
+}
+
+.shieldhero {
+	background-color: #1D2E07;
+	color: #E3E3E3;
+	border-color: #E3E3E3;
+}
+
+.deku {
+	background-color: #176768;
+	color: #f7efe2;
+	border-color: crimson;
+}
+
+.joker {
+	background-color: black;
+	color: red;
+	border-color: red;
+}
+
+.phantom {
+	background-color: black;
+	color: lawngreen;
+	border-color: lawngreen;
+}
+
+h1 {
+	text-align: center;
+}
+
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: bold;
+	color: green;
+	text-decoration: underline;
+}
+
+.image {
+	float: right;
+	clear: right;
+	padding-right: 40px;
+	width: 60%;
+	height: 50%;
+}
+
+body::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.btn {
+	width: 75px;
+	text-align: center;
+	padding: 5px;
+	font-weight: bold;
+}
+
+	.btn:hover {
+		text-decoration: none;
+	}
+
+.shieldhero .btn {
+	background-color: #2C420F;
+	border: 5px solid #2C420F;
+	border-radius: 8px;
+	color: #E3E3E3;
+}
+
+.shieldhero .btn:hover {
+	background-color: #607F36;
+	border: 5px solid #506E28;
+}
+
+.phantom .btn {
+	background-color: lawngreen;
+	border: 5px solid lawngreen;
+	border-radius: 8px;
+	color: black;
+}
+
+	.phantom .btn:hover {
+		background-color: green;
+		border: 5px solid darkgreen;
+		color: limegreen;
+	}
+
+.joker .btn {
+	background-color: red;
+	border: 5px solid darkred;
+	border-radius: 8px;
+	color: black;
+}
+
+	.joker .btn:hover {
+		background-color: darkred;
+		border: 5px solid red;
+		color: whitesmoke;
+	}
+
+.deku .btn {
+	background-color: crimson;
+	border: 5px solid crimson;
+	border-radius: 8px;
+	color: black;
+}
+
+	.deku .btn:hover {
+		background-color: darkred;
+		border: 5px solid darkred;
+		color: #f7efe2;
+	}
+
+.witch .btn {
+	background-color: #6d1942;
+	border: 5px solid #531a34;
+	border-radius: 8px;
+	color: antiquewhite;
+}
+
+	.witch .btn:hover {
+		background-color: #aa4d7a;
+		border: 5px solid #7c204d;
+		color: antiquewhite;
+	}

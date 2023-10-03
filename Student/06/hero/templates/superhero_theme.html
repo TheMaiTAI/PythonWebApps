@@ -14,17 +14,14 @@
 {% for h in hero %}
 <body class="{{h.heroClass|default:"main"}}">
     {% endfor %}
-    <div class="container {{h.heroClass}}">
 
-        {% block title %}
-        <h1 class="header">Superhero Database</h1>
-        {% endblock title %}
+    {% block title %}
+    <h1 class="header">Superhero Database</h1>
+    {% endblock title %}
 
-        {% block content %}
-        <h2>No Block Defined</h2>
-        {% endblock content %}
-
-    </div>
+    {% block content %}
+    <h2>No Block Defined</h2>
+    {% endblock content %}
 
 </body>
 

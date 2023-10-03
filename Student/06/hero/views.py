@@ -2,6 +2,7 @@ from typing import Any, Dict
 from django.shortcuts import render
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
 from .models import Superhero
+import os
 
 class IndexView(TemplateView):
     template_name = "index.html"
@@ -19,7 +20,13 @@ class HeroListView(ListView):
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Superhero
-    context_object_name = 'hero'
+    context_object_name = 'hero_details'    
+        
+    def get_context_data(self, name=context_object_name, **kwargs):                        
+        context = super(HeroDetailView, self).get_context_data(**kwargs)
+        key = context[name].id
+        context[name] = Superhero.objects.filter(pk=key)
+        return context;
 
 class HeroCreateView(CreateView):
     template_name = "hero/add.html"
@@ -34,3 +41,4 @@ class HeroUpdateView(UpdateView):
 class HeroDeleteView(DeleteView):
     model = Superhero
     template_name = 'hero/delete.html'
+    
