@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Student",
+    "\\Student\\03",
     "\\Student\\03\\Superhero",
+    "\\Student\\03\\Superhero\\config",
     "\\Student\\04\\Superhero",
-    "\\Student\\04\\Superhero\\hero",
-    "\\Student\\04\\Superhero\\hero\\templates",
+    "\\Student\\04\\Superhero\\Superhero",
     "\\Student\\05",
     "\\Student\\05\\config",
-    "\\Student\\05\\static",
-    "\\Student\\05\\static\\images"
+    "\\Student\\05\\hero"
   ],
-  "SelectedNode": "\\Student\\05\\static\\images\\shield hero.jpg",
+  "SelectedNode": "\\Student\\06\\config\\settings.py",
   "PreviewInSolutionExplorer": false
 }

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,16 +77,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': environ.get('DATABASE_ENGINE'),
-        'NAME': environ.get('DATABASE_NAME'),
+        'ENGINE': os.getenv('DATABASE_ENGINE'),
+        'NAME': os.getenv('DATABASE_NAME'),
     }
 }
 
-POSTGRES_DB = environ.get("POSTGRES_DB")  # database name
-POSTGRES_PASSWORD = environ.get("POSTGRES_PASSWORD")  # database user password
-POSTGRES_USER = environ.get("POSTGRES_USER")  # database username
-POSTGRES_HOST = environ.get("POSTGRES_HOST")  # database host
-POSTGRES_PORT = environ.get("POSTGRES_PORT")  # database port
+POSTGRES_DB = os.getenv("POSTGRES_DB")  # database name
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")  # database user password
+POSTGRES_USER = os.getenv("POSTGRES_USER")  # database username
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")  # database host
+POSTGRES_PORT = os.getenv("POSTGRES_PORT")  # database port
 
 POSTGRES_READY = (
     POSTGRES_DB is not None
