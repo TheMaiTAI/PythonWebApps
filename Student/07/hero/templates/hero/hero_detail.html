@@ -1,0 +1,21 @@
+{% extends 'superhero_theme.html' %}
+
+{% block title %}
+<h1>{{hero.name}}</h1>
+{% endblock title %}
+
+{% block content %}
+<p><a href="/hero" class="btn">Home</a></p>
+
+
+<p>Real Name: {{hero.identity}}</p>
+<p>Description: {{hero.description}}</p>
+<p>Strength: {{hero.strength}}</p>
+<p>Weakness: {{hero.weakness}}</p>
+<img src="{{hero.image}}" alt="{{hero.image}}.jpg" class="image" />
+
+<span><a href="{{hero.pk}}/edit" class="btn">Modify Hero</a></span>
+<span><a href="{{hero.pk}}/delete" class="btn">Delete Hero</a></span>
+
+
+{% endblock content %}
