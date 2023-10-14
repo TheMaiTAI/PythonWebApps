@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ClassroomDemos",
+    "\\ClassroomDemos\\07",
+    "\\ClassroomDemos\\07\\News",
+    "\\ClassroomDemos\\07\\News\\config",
     "\\Student",
-    "\\Student\\03",
-    "\\Student\\03\\Superhero",
-    "\\Student\\03\\Superhero\\config",
-    "\\Student\\04\\Superhero",
-    "\\Student\\04\\Superhero\\Superhero",
-    "\\Student\\05",
-    "\\Student\\05\\config",
-    "\\Student\\05\\hero"
+    "\\Student\\06\\hero",
+    "\\Student\\06\\hero\\templates",
+    "\\Student\\07",
+    "\\Student\\07\\static"
   ],
-  "SelectedNode": "\\Student\\06\\config\\settings.py",
+  "SelectedNode": "\\Student\\07\\hero\\templates\\_navbar.html",
   "PreviewInSolutionExplorer": false
 }
