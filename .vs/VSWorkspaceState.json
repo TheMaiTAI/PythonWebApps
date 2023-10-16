@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassroomDemos",
+    "\\ClassroomDemos\\06\\Blog",
+    "\\ClassroomDemos\\06\\Blog\\blog",
     "\\ClassroomDemos\\07",
-    "\\ClassroomDemos\\07\\News",
-    "\\ClassroomDemos\\07\\News\\config",
+    "\\ClassroomDemos\\TDD",
+    "\\ClassroomDemos\\TDD\\blog",
+    "\\ClassroomDemos\\TDD\\blog\\management",
     "\\Student",
-    "\\Student\\06\\hero",
-    "\\Student\\06\\hero\\templates",
-    "\\Student\\07",
-    "\\Student\\07\\static"
+    "\\Student\\07\\hero",
+    "\\Student\\07\\hero\\templates"
   ],
-  "SelectedNode": "\\Student\\07\\hero\\templates\\_navbar.html",
   "PreviewInSolutionExplorer": false
 }

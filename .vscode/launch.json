@@ -77,5 +77,42 @@
             "django": true,
             "justMyCode": true
         }
+	{
+            "name": "Run server",
+            "type": "python",
+            "request": "launch",
+            "program": "manage.py",
+            "cwd": "${workspaceFolder}/Student/08",
+            "args": [
+                "runserver",
+                "8001"
+            ],
+            "django": true,
+            "justMyCode": true
+        }
+{
+    "name": "Django Test",
+    "type": "python",
+    "request": "launch",
+    "program": "manage.py",
+            "cwd": "${workspaceFolder}/Student/08",
+    "args": [
+        "test"
+    ],
+    "django": true,
+    "justMyCode": true
+}
+{
+    "name": "Get Pages",
+    "type": "python",
+    "request": "launch",
+    "program": "manage.py",
+            "cwd": "${workspaceFolder}/Student/08",
+    "args": [
+        "pages"
+    ],
+    "django": true,
+    "justMyCode": true
+}
     
 }
