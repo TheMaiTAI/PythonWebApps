@@ -18,36 +18,14 @@ class Superhero(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse("hero_detail", kwargs={"pk": self.pk})
-    
-class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
-    bio = models.TextField()
-
-    def __str__(self):
-        return self.user.username
-
-    @property
-    def name(self):
-        return self.user.first_name + ' ' + self.user.last_name
-    
-    @property
-    def articles(self):
-        return Article.objects.filter(author=self)
-
-    @staticmethod
-    def get_me(user):
-        return Author.objects.get_or_create(user=user)[0]
-    
+        return reverse_lazy("hero_detail", kwargs={"pk": self.pk})
     
 class Article(models.Model):
-
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, editable=False)
-    title = models.CharField(max_length=100)
-    body = models.TextField()
+    title = models.CharField(max_length=100, default="Article Title")
+    body = models.TextField(default="Article Body")
     
-    def __str__(self):
-        return self.title    
-
+    def __str__(self) -> str:
+        return self.title
+    
     def get_absolute_url(self):
-        return reverse_lazy('article_detail', kwargs={"pk": self.pk})
+        return reverse_lazy("article_detail", kwargs={"pk": self.pk})

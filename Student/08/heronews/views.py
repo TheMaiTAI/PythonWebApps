@@ -1,6 +1,6 @@
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
-from .models import Article, Author, Superhero
+from .models import Superhero, Article
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from typing import Any, Dict
@@ -34,8 +34,8 @@ class ArticleDeleteView(LoginRequiredMixin, DeleteView):
     model = Article
     
     def get_success_url(self):
-        return reverse_lazy('list')
-        
+        return reverse_lazy('article_list')
+    
 #Hero Views 
 
 class HeroListView(ListView):

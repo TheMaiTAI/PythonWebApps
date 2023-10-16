@@ -31,21 +31,20 @@ from heronews.views import (SignUpView,
 
 urlpatterns = [
     #Accounts    
-    path('accounts/',        include('django.contrib.auth.urls')),
-    path(r'admin/', site.urls),
-    path('accounts/signup/', SignUpView.as_view(), name='signup'),
-    path('', IndexView.as_view(), name='home'),
+    path('accounts/',               include('django.contrib.auth.urls')),
+    path(r'admin/',                 site.urls),
+    path('accounts/signup/',        SignUpView.as_view(), name='signup'),
+    path('',                        IndexView.as_view(), name='home'),
     
     #Hero Database
-    path('hero/',                HeroListView.as_view(),    name='hero_list'),   
-    path('hero/<int:pk>',        HeroDetailView.as_view(),  name='hero_detail'),
-    path('hero/add',             HeroCreateView.as_view(),  name='hero_add'),
-    path('hero/<int:pk>/edit',   HeroUpdateView.as_view(),  name='hero_edit'),
-    path('hero/<int:pk>/delete', HeroDeleteView.as_view(),  name='hero_delete'),
+    path('hero/',                   HeroListView.as_view(),    name='hero_list'),   
+    path('hero/<int:pk>',           HeroDetailView.as_view(),  name='hero_detail'),
+    path('hero/add',                HeroCreateView.as_view(),  name='hero_add'),
+    path('hero/<int:pk>/edit',      HeroUpdateView.as_view(),  name='hero_edit'),
+    path('hero/<int:pk>/delete',    HeroDeleteView.as_view(),  name='hero_delete'),
         
     #Article Database
-    path('article/',                ArticleListView.as_view(),    name='article_list'),   
-    path('article/<str:author>',    ArticleListView.as_view(),    name='my_articles'),   
+    path('article/',                ArticleListView.as_view(),    name='article_list'),  
     path('article/<int:pk>',        ArticleDetailView.as_view(),  name='article_detail'),
     path('article/add',             ArticleCreateView.as_view(),  name='article_add'),
     path('article/<int:pk>/edit',   ArticleUpdateView.as_view(),  name='article_edit'),
