@@ -16,9 +16,18 @@ Including another URLconf
 """
 from django.contrib.admin import site
 from django.urls import include, path
-from heronews.views_misc import SignUpView, IndexView
-from heronews.views_article import ArticleListView, ArticleDeleteView, ArticleCreateView, ArticleDetailView, ArticleUpdateView
-from heronews.views_hero import HeroCreateView, HeroDeleteView, HeroDetailView, HeroListView, HeroUpdateView
+from heronews.views import (SignUpView, 
+                            IndexView,
+                            ArticleListView, 
+                            ArticleDeleteView, 
+                            ArticleCreateView, 
+                            ArticleDetailView, 
+                            ArticleUpdateView,
+                            HeroCreateView, 
+                            HeroDeleteView, 
+                            HeroDetailView, 
+                            HeroListView, 
+                            HeroUpdateView)
 
 urlpatterns = [
     #Accounts    
@@ -36,6 +45,7 @@ urlpatterns = [
         
     #Article Database
     path('article/',                ArticleListView.as_view(),    name='article_list'),   
+    path('article/<str:author>',    ArticleListView.as_view(),    name='my_articles'),   
     path('article/<int:pk>',        ArticleDetailView.as_view(),  name='article_detail'),
     path('article/add',             ArticleCreateView.as_view(),  name='article_add'),
     path('article/<int:pk>/edit',   ArticleUpdateView.as_view(),  name='article_edit'),

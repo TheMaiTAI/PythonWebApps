@@ -1,4 +1,6 @@
 {% extends 'superhero_theme.html' %}
+{% load crispy_forms_tags %}
+
 
 {% block title %}
 <h1>Add New Article</h1>
@@ -11,7 +13,7 @@
     {% csrf_token %}
 
     <!-- Using the formset -->
-    {{ form.as_p }}
+    {{ form | crispy }}
 
     <input type="submit" value="Submit">
 </form>

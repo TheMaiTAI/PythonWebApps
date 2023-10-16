@@ -1,0 +1,16 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+{% for article in articles %}
+<a href="{{article.pk}}"><p>{{ article.title }}</p></a>
+{% endfor %}
+
+{% if user.is_authenticated %}
+<div>
+    <p><a href="add" class="btn">Add New Article</a></p>
+</div>
+
+{% endif %}
+
+{% endblock content %}
