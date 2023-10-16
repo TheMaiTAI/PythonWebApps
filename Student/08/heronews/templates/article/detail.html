@@ -1,2 +1,9 @@
 {% extends 'superhero_theme.html' %}
 
+{% block content %}
+
+<p>{{article.title}}</p>
+<p>{{article.author.name}}</p>
+<p>{{article.body}}</p>
+
+{% endblock content %}
