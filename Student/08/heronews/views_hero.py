@@ -1,9 +1,6 @@
-from django.urls import reverse, reverse_lazy
-from typing import Any, Dict
-from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
 from .models import Superhero
-import os
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class IndexView(TemplateView):

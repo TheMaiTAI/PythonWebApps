@@ -1,11 +1,7 @@
-from django.urls import reverse, reverse_lazy
-from typing import Any, Dict
-from django.shortcuts import redirect, render
-from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
-from .models import Superhero, Article, Author
-import os
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
+from .models import Article
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.forms import UserCreationForm
 
 class ArticleListView(ListView):
     template_name = "article/article_list.html"
@@ -33,8 +29,3 @@ class ArticleDeleteView(LoginRequiredMixin, DeleteView):
     
     def get_success_url(self):
         return reverse_lazy("hero_list")
-
-class SignUpView(CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy("login")
-    template_name = "registration/acct_add.html"

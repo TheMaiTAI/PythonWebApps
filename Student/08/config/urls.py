@@ -14,19 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import include, path
-from django.views.generic import RedirectView
-from heronews.views_article import ArticleListView, ArticleDeleteView, ArticleCreateView, ArticleDetailView, ArticleUpdateView, SignUpView
+from heronews.views_misc import SignUpView, IndexView
+from heronews.views_article import ArticleListView, ArticleDeleteView, ArticleCreateView, ArticleDetailView, ArticleUpdateView
 from heronews.views_hero import HeroCreateView, HeroDeleteView, HeroDetailView, HeroListView, HeroUpdateView
 
 urlpatterns = [
     #Accounts    
     path('accounts/',        include('django.contrib.auth.urls')),
     path('accounts/signup/', SignUpView.as_view(), name='signup'),
+    path('', IndexView.as_view(), name='home'),
     
     #Hero Database
-    path('',                     RedirectView.as_view(url='article/')),
     path('hero/',                HeroListView.as_view(),    name='hero_list'),   
     path('hero/<int:pk>',        HeroDetailView.as_view(),  name='hero_detail'),
     path('hero/add',             HeroCreateView.as_view(),  name='hero_add'),
