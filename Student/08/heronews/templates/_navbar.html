@@ -5,13 +5,18 @@
         <a class="navbar-brand text-light" href="/">Superhero News</a>
 
         <ul class="navbar-nav text-light ml-auto">
-
-            {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'article_add' %}">Create New Article</a>
+                <a class="nav-link" href="{% url 'hero' %}">Heroes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Hello {{ user.username }}</a>
+                <a class="nav-link" href="{% url 'article' %}">News</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'article_add' %}">Write Article</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">User Info</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout' %}">Log out</a>
