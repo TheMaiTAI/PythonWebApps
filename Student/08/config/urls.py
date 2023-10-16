@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib.admin import site
 from django.urls import include, path
 from heronews.views_misc import SignUpView, IndexView
 from heronews.views_article import ArticleListView, ArticleDeleteView, ArticleCreateView, ArticleDetailView, ArticleUpdateView
@@ -22,6 +23,7 @@ from heronews.views_hero import HeroCreateView, HeroDeleteView, HeroDetailView, 
 urlpatterns = [
     #Accounts    
     path('accounts/',        include('django.contrib.auth.urls')),
+    path(r'admin/', site.urls),
     path('accounts/signup/', SignUpView.as_view(), name='signup'),
     path('', IndexView.as_view(), name='home'),
     
