@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gwdo*o)2lznywx^wpv3k7wv9iblahs78qcz1^$xro#b)g#d=jl
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.ondigitalocean.app']
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Application definition
