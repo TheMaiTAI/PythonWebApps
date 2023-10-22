@@ -1,10 +1,9 @@
-from django.urls import reverse
 from django.db import models
-from django.contrib.auth.models import User
+from django.urls import reverse
 
 class Superhero(models.Model):
     class Meta:
-        db_table = 'database'
+        db_table = 'hero_database'
     name = models.CharField(max_length=100, default="Hero Name")
     identity = models.CharField(max_length=100, default="Civilian Name")
     description = models.TextField(default="Description")
