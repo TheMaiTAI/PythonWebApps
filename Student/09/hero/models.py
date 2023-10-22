@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Superhero(models.Model):
     class Meta:
-        db_table = 'hero_database'
+        db_table = 'database'
     name = models.CharField(max_length=100, default="Hero Name")
     identity = models.CharField(max_length=100, default="Civilian Name")
     description = models.TextField(default="Description")
