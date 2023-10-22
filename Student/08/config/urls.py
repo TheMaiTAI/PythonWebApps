@@ -19,6 +19,7 @@ from django.urls import include, path
 from heronews.views import (SignUpView, 
                             IndexView,
                             ArticleListView, 
+                            SortedArticleListView, 
                             ArticleDeleteView, 
                             ArticleCreateView, 
                             ArticleDetailView, 
@@ -45,6 +46,7 @@ urlpatterns = [
         
     #Article Database
     path('article/',                ArticleListView.as_view(),    name='article_list'),  
+    path('article/<str:author>',    SortedArticleListView.as_view(), name='my_article_list'),  
     path('article/<int:pk>',        ArticleDetailView.as_view(),  name='article_detail'),
     path('article/add',             ArticleCreateView.as_view(),  name='article_add'),
     path('article/<int:pk>/edit',   ArticleUpdateView.as_view(),  name='article_edit'),

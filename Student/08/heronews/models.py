@@ -31,6 +31,10 @@ class Author(models.Model):
     def __str__(self) -> str:
         return self.name
     
+    @staticmethod
+    def get_me(user):
+        return Author.objects.get_or_create(user=user)[0]
+    
 class Article(models.Model):
     title = models.CharField(max_length=100, default="Article Title")
     body = models.TextField(default="Article Body")

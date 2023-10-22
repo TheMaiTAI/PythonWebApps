@@ -1,15 +1,17 @@
-from django.test import TestCase, SimpleTestCase
+from django.test import TestCase
 from .models import Superhero, Article, Author
 
-class HeroNewsAppTest(SimpleTestCase):
-        
+class ArticleDetailPageTest(TestCase):
     def test_page(self):
-        page = "https://tlee-proj08-z9ku8.ondigitalocean.app/article/"
+        page = "http://localhost:8000/article/1"
         response = self.client.get(page)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
         
-class FixtureTest(TestCase):
+class ArticleAuthorTest(TestCase):
     fixtures = ['data.json']
-    def test_with_data(self):
-        num_heroes = len(Superhero.objects.all())
-        self.assertEqual(num_heroes, 5)
+    
+    def get_author(self):
+        user = self.client.force_login(user)
+        author = Article.objects.get(author=user)
+        self.assertEqual(author, 'hulk')
+        

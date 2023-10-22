@@ -13,6 +13,16 @@ class ArticleListView(ListView):
     template_name = 'article/list.html'
     model = Article
     context_object_name = 'articles'
+    
+class SortedArticleListView(LoginRequiredMixin, ListView):
+    template_name = 'article/sortedlist.html'
+    model = Article
+    context = Article.objects.all()
+    
+    def get_page_context(self, request, context=context):
+        current_user = self.request.user.pk
+        context['my_articles'] = context.filter(author=current_user)
+        return context
            
 class ArticleDetailView(DetailView):
     template_name = 'article/detail.html'
