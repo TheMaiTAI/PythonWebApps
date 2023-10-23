@@ -15,18 +15,6 @@ envs:
   value: .ondigitalocean.app
 features:
 - buildpack-stack=ubuntu-22
-ingress:
-  rules:
-  - component:
-      name: service
-    match:
-      path:
-        prefix: /
-  - component:
-      name: static
-    match:
-      path:
-        prefix: /static
 name: proj09-tlee
 region: nyc
 services:
@@ -68,7 +56,7 @@ services:
     type: SECRET
     value: EV[1:j/UmtYG4O1Ce/QszcLIkEBcO86955jfs:MinMlM01XcRLw7ZH7ZQERisTCsbBzl5LkhBMWbU=]
   github:
-    branch: production
+    branch: main
     deploy_on_push: true
     repo: TheMaiTAI/PythonWebApps
   http_port: 8080
@@ -85,7 +73,7 @@ services:
 static_sites:
 - environment_slug: html
   github:
-    branch: production
+    branch: main
     deploy_on_push: true
     repo: TheMaiTAI/PythonWebApps
   name: static
