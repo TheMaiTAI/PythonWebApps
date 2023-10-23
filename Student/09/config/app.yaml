@@ -79,7 +79,7 @@ services:
   - path: /
   run_command: |
     python manage.py migrate --no-input
-    python manage.py createsuperuser --noinput
+    python manage.py loaddata hero_database.json
     gunicorn --worker-tmp-dir /dev/shm config.wsgi
   source_dir: Student/09
 static_sites:
