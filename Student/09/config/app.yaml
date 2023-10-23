@@ -15,18 +15,6 @@ envs:
   value: .ondigitalocean.app
 features:
 - buildpack-stack=ubuntu-22
-ingress:
-  rules:
-  - component:
-      name: service
-    match:
-      path:
-        prefix: /
-  - component:
-      name: static
-    match:
-      path:
-        prefix: /static
 name: proj09-tlee
 region: nyc
 services:
