@@ -3,14 +3,11 @@
     "",
     "\\ClassroomDemos\\09\\ViewWorkshop\\config",
     "\\Student",
-    "\\Student\\07",
     "\\Student\\07\\config",
     "\\Student\\07\\hero",
-    "\\Student\\08\\static",
-    "\\Student\\08\\static\\images",
     "\\Student\\09",
     "\\Student\\09\\config"
   ],
-  "SelectedNode": "\\Student\\09\\hero",
+  "SelectedNode": "\\Student\\09\\config\\app.yaml",
   "PreviewInSolutionExplorer": false
 }
