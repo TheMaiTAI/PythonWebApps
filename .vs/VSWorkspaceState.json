@@ -1,13 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassroomDemos\\09\\ViewWorkshop\\config",
+    "\\ClassroomDemos",
+    "\\ClassroomDemos\\09",
+    "\\ClassroomDemos\\09\\ViewWorkshop",
+    "\\ClassroomDemos\\09\\ViewWorkshop\\views",
+    "\\ClassroomDemos\\09\\ViewWorkshop\\views\\templates",
     "\\Student",
-    "\\Student\\07\\config",
-    "\\Student\\07\\hero",
-    "\\Student\\09",
-    "\\Student\\09\\config"
+    "\\Student\\10",
+    "\\Student\\10\\HeroInvestigations",
+    "\\Student\\10\\HeroInvestigations\\hero",
+    "\\Student\\10\\HeroInvestigations\\hero\\templates"
   ],
-  "SelectedNode": "\\Student\\09\\config\\app.yaml",
+  "SelectedNode": "\\ClassroomDemos\\09\\ViewWorkshop\\views\\templates\\_navbar.html",
   "PreviewInSolutionExplorer": false
 }
