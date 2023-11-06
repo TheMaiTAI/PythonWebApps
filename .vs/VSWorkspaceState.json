@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassroomDemos",
-    "\\ClassroomDemos\\09",
+    "\\ClassroomDemos\\08\\Messenger",
+    "\\ClassroomDemos\\08\\Messenger\\messenger",
     "\\ClassroomDemos\\09\\ViewWorkshop",
-    "\\ClassroomDemos\\09\\ViewWorkshop\\views",
-    "\\ClassroomDemos\\09\\ViewWorkshop\\views\\templates",
+    "\\ClassroomDemos\\09\\ViewWorkshop\\Documents",
+    "\\ClassroomDemos\\11",
+    "\\ClassroomDemos\\11\\Book",
+    "\\ClassroomDemos\\11\\Book\\book",
     "\\Student",
-    "\\Student\\10",
-    "\\Student\\10\\HeroInvestigations",
-    "\\Student\\10\\HeroInvestigations\\hero",
-    "\\Student\\10\\HeroInvestigations\\hero\\templates"
+    "\\Student\\09\\config"
   ],
-  "SelectedNode": "\\ClassroomDemos\\09\\ViewWorkshop\\views\\templates\\_navbar.html",
+  "SelectedNode": "\\Student\\11\\HeroDocs\\db.sqlite3",
   "PreviewInSolutionExplorer": false
 }
