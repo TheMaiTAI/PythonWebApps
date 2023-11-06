@@ -3,8 +3,9 @@ from pathlib import Path
 from .models import Article, Superhero
 from django.test import TestCase
 from json import dump, loads
-
-#Heroes
+#-----------------------------------------------#
+#Hero Tests
+#-----------------------------------------------#
 class AddHeroesJSON(TestCase):
     fixtures = Superhero.objects.all()
     def test_add_heroes(self):
@@ -24,6 +25,8 @@ class PrintHeroQueryJSON(TestCase):
     
 class HeroExportAsJSON(TestCase):
     def test_export_heroes(self):
+        Superhero.objects.create(name="Iron Man", identity="Tony Stark")
+        Superhero.objects.create(name="Deku", identity="Midoriya Izuku")
         data = [h for h in Superhero.objects.all().values()]
         with open("heroes.json", "w") as f:
             dump(data, f, indent=4)
@@ -53,8 +56,9 @@ class HeroImportAsJSON(TestCase):
         num_heroes = len(Superhero.objects.all())
         self.assertNotEqual(num_heroes, 0)
         os.remove("heroes.json")
-
-#Articles
+#-----------------------------------------------#
+#Article Tests
+#-----------------------------------------------#
 class AddArticlesJSON(TestCase):
     fixtures = Article.objects.all()
     def test_add_articles(self):
