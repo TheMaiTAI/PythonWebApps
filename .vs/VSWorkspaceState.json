@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ClassroomDemos\\11\\Book",
+    "\\ClassroomDemos\\11\\Book\\book",
     "\\Student",
     "\\Student\\08",
     "\\Student\\08\\heronews",
-    "\\Student\\09\\hero",
     "\\Student\\11",
     "\\Student\\11\\HeroDocs",
     "\\Student\\11\\HeroDocs\\config",
     "\\Student\\11\\HeroDocs\\docs"
   ],
-  "SelectedNode": "\\Student\\11\\HeroDocs\\docs\\tests_CSV.py",
+  "SelectedNode": "\\Student\\11\\HeroDocs\\manage.py",
   "PreviewInSolutionExplorer": false
 }
